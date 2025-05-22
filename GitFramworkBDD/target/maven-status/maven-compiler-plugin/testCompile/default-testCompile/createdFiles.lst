@@ -1,5 +1,6 @@
 pageFactory\HomePageFactory.class
 StepDefinations\LoginStepsDefination.class
+TestRunner\CucumberTestRunnerForTags.class
 StepDefinations\POMLoginStepsDefination.class
 TestRunner\CucumberTestRunner.class
 pageFactory\loginPageFactory.class
