@@ -2,17 +2,14 @@ package StepDefinations;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import pageFactory.HomePageFactory;
 import pageFactory.loginPageFactory;
 
@@ -25,8 +22,9 @@ public class PageFactoryLoginStepsDefination {
 	@Given("User is on Login Page")
 	public void user_is_on_login_page() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Orangebits\\Downloads\\Compressed\\chromedriver.exe");
-		WebDriverManager.chromedriver().browserVersion("137.0.7151.41").setup();
-		driver = new ChromeDriver();
+		//WebDriverManager.chromedriver().browserVersion("135.0.7151.41").setup();
+		//driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/v1/");
