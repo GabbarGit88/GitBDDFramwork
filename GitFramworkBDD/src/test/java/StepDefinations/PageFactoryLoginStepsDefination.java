@@ -12,6 +12,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pageFactory.HomePageFactory;
 import pageFactory.loginPageFactory;
 
@@ -24,6 +25,7 @@ public class PageFactoryLoginStepsDefination {
 	@Given("User is on Login Page")
 	public void user_is_on_login_page() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Orangebits\\Downloads\\Compressed\\chromedriver.exe");
+		WebDriverManager.chromedriver().browserVersion("137.0.7151.41").setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
