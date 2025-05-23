@@ -39,10 +39,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>Selenium</groupId>
-			<artifactId>java</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.20.0</version> <!-- or latest -->
 		</dependency>
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
@@ -65,8 +66,8 @@
 				<version>3.2.5</version>
 				<configuration>
 					<includes>
-                    <include>**/*.java</include>
-                </includes>
+						<include>**/*.java</include>
+					</includes>
 
 					<!-- To show full stack traces and console output -->
 					<forkCount>1</forkCount>
